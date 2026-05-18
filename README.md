@@ -1,5 +1,11 @@
 # LPA2 Taller1: Pruebas Unitarias Tienda de Muebles
 
+## Información del Estudiante
+
+- **Estudiante:** Luz Carolina Hernandez Vega  
+- **Programa:** Ingeniería de Sistemas  
+- **Materia:** Lenguaje de Programación Avanzado II 
+
 ![commits](https://badgen.net/github/commits/UR-CC/lpa2-taller1?icon=github) 
 ![last_commit](https://img.shields.io/github/last-commit/UR-CC/lpa2-taller1)
 
@@ -527,6 +533,135 @@ El estudiante debe actualizar su repositorio personal con:
     ```bash
     pytest --durations=10
     ```
+
+# Instrucciones de Ejecución
+
+## 1. Clonar el repositorio
+
+```bash
+git clone https://github.com/LCarolina811/lpa2-taller1.git
+cd lpa2-taller1
+```
+
+---
+
+## 2. Crear y activar entorno virtual
+
+### Windows
+
+```bash
+python -m venv venv
+venv\Scripts\activate
+```
+
+### Linux / Mac
+
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
+---
+
+## 3. Instalar dependencias
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## 4. Configurar variable de entorno
+
+### Windows (PowerShell)
+
+```powershell
+$env:PYTHONPATH="."
+```
+
+### Linux / Mac
+
+```bash
+export PYTHONPATH=.
+```
+
+---
+
+# Ejecución de Pruebas
+
+## Ejecutar todas las pruebas
+
+```bash
+pytest -v
+```
+
+---
+
+## Ejecutar pruebas con cobertura
+
+```bash
+pytest --cov=src --cov-report=html
+```
+
+---
+
+## Mostrar cobertura en terminal
+
+```bash
+pytest --cov=src --cov-report=term-missing
+```
+
+---
+
+## Ejecutar pruebas específicas
+
+```bash
+pytest tests/unit/models/ -v
+```
+
+---
+
+## Ejecutar pruebas rápidas
+
+```bash
+pytest -m "not slow"
+```
+
+---
+
+# Reporte de Cobertura
+
+Después de ejecutar:
+
+```bash
+pytest --cov=src --cov-report=html
+```
+
+Se generará una carpeta llamada:
+
+```bash
+htmlcov/
+```
+
+Para visualizar el reporte:
+
+### Windows
+
+```bash
+start htmlcov/index.html
+```
+
+### Linux
+
+```bash
+xdg-open htmlcov/index.html
+```
+
+### Mac
+
+```bash
+open htmlcov/index.html
+```
 
 **Nota**: repo [solución al proyecto Muebles](https://github.com/axlcraft/lpa1-taller-poo).
 
